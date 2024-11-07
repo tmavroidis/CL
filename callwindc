@@ -1,8 +1,8 @@
 Call up a browser and URL from the 5250 command line or menu
 
-             /* PGM CALLWINDC                                                    +
-                from the command line                                            +
-                call callwindc www.google.com                                    */
+             /* PGM CALLWINDC                  +
+                from the command line          +
+                call callwindc www.google.com   */
              
              pgm        parm(&url)
 
