@@ -1,0 +1,19 @@
+Call up a browser and URL from the 5250 command line or menu
+
+             /* PGM CALLWINDC                                                    +
+                from the command line                                            +
+                call callwindc www.google.com                                    */
+             
+             pgm        parm(&url)
+
+             dcl        var(&url) type(*char) len(975)
+             dcl        var(&cmd) type(*char) len(1000)
+
+             strpco
+             monmsg     msgid(iws4010)
+
+             chgvar     var(&cmd) value('RUNDLL32 url,FileProtocolHandler' +
+                          *bcat %lower(&url))
+             strpccmd   pccmd(&cmd)
+
+             endpgm                     
